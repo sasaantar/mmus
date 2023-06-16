@@ -18,7 +18,7 @@ async def set_pfp(_, message: Message):
             )
             except:
                 return await fuk.edit_text("**__◍ فشل تغيير صوره حساب المساعد √__**")
-    else:
+        else:
             await message.reply_text(
             "**__◍ قم بالرد على الصوره √__**"
         )

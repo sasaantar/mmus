@@ -13,6 +13,7 @@ def admin_check(func: Callable) -> Callable:
     async def non_admin(_, message: Message):
         if not await is_active_chat(message.chat.id):
             return False
+
         if message.from_user.id in SUDOERS:
             return await func(_, message)
 

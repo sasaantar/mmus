@@ -66,7 +66,7 @@ async def fallen_st(_, message: Message):
             await message.reply_photo(
                 photo=botpic,
                 caption=PM_START_TEXT.format(
-                    message.from_user.first_name,
+                    message.from_user.mention,
                     "[◜ꪜꫀꪀ᥆ꪑ◞](https://t.me/e_e_9_9)",
                 ),
                 reply_markup=InlineKeyboardMarkup(pm_buttons),

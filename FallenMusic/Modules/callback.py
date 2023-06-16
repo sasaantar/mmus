@@ -202,7 +202,7 @@ async def help_menu(_, query: CallbackQuery):
         await query.answer()
     except:
         pass
-    keyboard = InlineKeyboardMarkup(help_back)
+    keyboard = InlineKeyboardMarkup(help_back2)
     try:
         await query.edit_message_text(
             text=HOW_USE.format("@E_E_9_9","@S_Q_I"),
@@ -242,8 +242,8 @@ async def home_fallen(_, query: CallbackQuery):
     try:
         await query.edit_message_text(
             text=PM_START_TEXT.format(
-                query.from_user.first_name,
-                BOT_MENTION,
+                query.from_user.mention,
+                "(◜ꪜꫀꪀ᥆ꪑ◞)[https://t.me/e_e_9_9]",
             ),
             reply_markup=InlineKeyboardMarkup(pm_buttons),
         )

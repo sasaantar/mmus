@@ -12,8 +12,7 @@ from .active import is_active_chat
 def admin_check(func: Callable) -> Callable:
     async def non_admin(_, message: Message):
         if not await is_active_chat(message.chat.id):
-            return await message.reply_text("**__◍ لا يوجد شي يشتغل √__**")
-
+            return False
         if message.from_user.id in SUDOERS:
             return await func(_, message)
 

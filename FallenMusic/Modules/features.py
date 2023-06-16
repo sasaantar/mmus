@@ -29,7 +29,7 @@ async def features(app,m:Message):
         photoo = db.get("venompic")
         bio = ". Money Is Everything @S_Q_I"
         keyboard = [[InlineKeyboardButton("◜ꪜꫀꪀ᥆ꪑ◞",user_id=5385770251),InlineKeyboardButton("◜𝚂𝙾𝚄𝚁𝙲𝙴◞",url="https://t.me/s_q_i")]]
-        await m.reply_photo(photoo,caption=f"- {[◜ꪜꫀꪀ᥆ꪑ◞](https://t.me/e_e_9_9)}\n\n - {bio}",reply_markup=InlineKeyboardMarkup(keyboard))
+        await m.reply_photo(photoo,caption=f"- [◜ꪜꫀꪀ᥆ꪑ◞](https://t.me/e_e_9_9)\n\n - {bio}",reply_markup=InlineKeyboardMarkup(keyboard))
     ## السورس
     if m.text == "السورس" or m.text == "سورس":
 	    text = "𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐄 𝐎𝐍 𝐓𝐄𝐋𝐄𝐆𝐑𝐀𝐌"

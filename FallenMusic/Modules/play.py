@@ -157,7 +157,7 @@ async def play(_, message: Message):
             )
         file_path = audio_dl(url)
     else:
-        if len(message.text) < 2:
+        if len(message.text.split()) == 1:
             return await fallen.edit_text("**__◍ ما الذي تريد تشغيله √__**")
         await fallen.edit_text("**__◍ يتم البحث انتظر √__**")
         query = message.text.split(None, 1)[1]

@@ -7,7 +7,7 @@ from FallenMusic import app, pytgcalls
 from FallenMusic.Helpers import _clear_, admin_check, close_key
 
 
-@app.on_message(filters.text filters.group,group=8)
+@app.on_message(filters.text & filters.group,group=8)
 @admin_check
 async def stop_str(_, message: Message):
  if message.text == "ايقاف" or message.text == "/stop":

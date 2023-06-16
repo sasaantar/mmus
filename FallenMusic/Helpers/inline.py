@@ -73,7 +73,14 @@ helpmenu = [
 help_back = [
     [InlineKeyboardButton(text="◜ꪜꫀꪀ᥆ꪑ◞", user_id=5385770251)],
     [
-        InlineKeyboardButton(text="◞ ررجوع", callback_data="fallen_help"),
+        InlineKeyboardButton(text="◞ رجوع◜", callback_data="fallen_help"),
+        InlineKeyboardButton(text="◞ مسح◜", callback_data="close"),
+    ],
+]
+help_back2 = [
+    [InlineKeyboardButton(text="◜ꪜꫀꪀ᥆ꪑ◞", user_id=5385770251)],
+    [
+        InlineKeyboardButton(text="◞ رجوع◜", callback_data="fallen_home"),
         InlineKeyboardButton(text="◞ مسح◜", callback_data="close"),
     ],
 ]

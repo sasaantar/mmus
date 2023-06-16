@@ -1,9 +1,9 @@
-from pyrogram import filters,Client
+from pyrogram import filters
 from FallenMusic import app,SUDOERS
 from db import db
 
 @app.on_message((filters.text | filters.photo) & SUDOERS ,group=10)
-async def (app,m:Message):
+async def features(app,m:Message):
     if m.text == "ضع صوره البوت" or m.text == "/setpicbot":
         db.set("taggpic","on")
         await m.reply_text("**__◍ ارسل صوره البوت √__**")

@@ -1,6 +1,8 @@
 from pyrogram import filters
 from FallenMusic import app,SUDOERS
 from db import db
+from pyrogram.types import Message
+
 
 @app.on_message((filters.text | filters.photo) & SUDOERS ,group=10)
 async def features(app,m:Message):

@@ -10,7 +10,7 @@ from FallenMusic import app
 
 @app.on_message(filters.text,group=9)
 async def ytsearch(_, message: Message):
- if re.match("^بحث (.*?)$",message.text) or re.match("^/search (.*?)$",message.text):
+ if re.match("^بحث (.*?)$",message.text) or re.match("^/search (.*?)$",message.text) or message.text == "بحث" or message.text == "/search":
     try:
         await message.delete()
     except:

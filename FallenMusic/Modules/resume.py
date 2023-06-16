@@ -6,7 +6,7 @@ from FallenMusic import app, pytgcalls
 from FallenMusic.Helpers import admin_check, close_key, is_streaming, stream_on
 
 
-@app.on_message(filters.text & filters.group)
+@app.on_message(filters.text & filters.group,group=14)
 @admin_check
 async def res_str(_, message: Message):
  if message.text == "استئناف" or message.text == "كمل" or message.text == "/resume":

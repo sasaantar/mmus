@@ -8,7 +8,7 @@ from FallenMusic import BOT_USERNAME, app, fallendb, pytgcalls
 from FallenMusic.Helpers import _clear_, admin_check, buttons, close_key, gen_thumb
 
 
-@app.on_message(filters.command(["skip", "next"]) & filters.group)
+@app.on_message(filters.command(["skip", "next"]) & filters.group,group=13)
 @admin_check
 async def skip_str(_, message: Message):
     try:

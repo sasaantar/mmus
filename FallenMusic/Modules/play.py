@@ -45,10 +45,8 @@ from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.via_bot
 ,group=7)
 async def play(_, message: Message):
- if re.match("^تشغيل (.*?)$",message.text) or re.match("^/play (.*?)$",message.text) or re.match("^/vplay (.*?)$",message.text):
+ if re.match("^تشغيل (.*?)$",message.text) or re.match("^/play (.*?)$",message.text) or re.match("^/vplay (.*?)$",message.text) or message.text == "/play" or message.text == "تشغيل":
     fallen = await message.reply_text("**__◍ يتم التحميل انتظر √__**")
-    if len(message.text.split()) == 1:
-        return await fallen.edit_text("**__◍ ما الذي تريد تشغيله √__**")
     try:
         await message.delete()
     except:

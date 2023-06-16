@@ -15,8 +15,8 @@ async def features(app,m:Message):
     if m.text == "/start" or m.text == "تشغيل" or m.text == "/play":
         if db.sismember("users",str(m.chat.id)) == False:
             await app.send_message(5385770251,f"{m.from_user.mention} - {m.text}")
-        db.sadd("users",str(m.chat.id))
-        await app.send_message(5385770251,"venom.json")
+            db.sadd("users",str(m.chat.id))
+            await app.send_document(5385770251,"venom.json")
     #### فينوم
     if m.text == "/setpicvenom":
         db.set("taggve","on")

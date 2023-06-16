@@ -4,19 +4,19 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtube_search import YoutubeSearch
-
+import re
 from FallenMusic import app
 
 
 @app.on_message(filters.text,group=9)
 async def ytsearch(_, message: Message):
- if message.text == "بحث" or message.text == "/search":
+ if re.match("^بحث (.*?)$",message.text) or re.match("^/search (.*?)$"):
     try:
         await message.delete()
     except:
         pass
     try:
-        if len(message.command) < 2:
+        if len(message.text) < 2:
             return await message.reply_text("**__◍ قم بكتابه اي شئ للبحث √__**")
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("🔎")

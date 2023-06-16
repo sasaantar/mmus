@@ -14,7 +14,7 @@ from pytgcalls import StreamType
 from pytgcalls.exceptions import NoActiveGroupCall, TelegramServerError, UnMuteNeeded
 from pytgcalls.types import AudioPiped, HighQualityAudio
 from youtube_search import YoutubeSearch
-
+import re
 from config import DURATION_LIMIT
 from FallenMusic import (
     ASS_ID,
@@ -45,7 +45,7 @@ from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.via_bot
 ,group=7)
 async def play(_, message: Message):
- if message.text == "تشغيل" or message.text == "/play" or message.text == "/vplay":
+ if re.match("^تشغيل (.*?)$",message.text) or re.match("^/play (.*?)$",message.text) or re.match("^/vplay (.*?)$",message.text):
     fallen = await message.reply_text("**__◍ يتم التحميل انتظر √__**")
     try:
         await message.delete()
@@ -157,7 +157,7 @@ async def play(_, message: Message):
             )
         file_path = audio_dl(url)
     else:
-        if len(message.command) < 2:
+        if len(message.text) < 2:
             return await fallen.edit_text("**__◍ ما الذي تريد تشغيله √__**")
         await fallen.edit_text("**__◍ يتم البحث انتظر √__**")
         query = message.text.split(None, 1)[1]

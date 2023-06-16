@@ -28,6 +28,7 @@ from FallenMusic.Helpers.inline import (
     buttons,
     close_key,
     help_back,
+    help_back2,
     helpmenu,
     pm_buttons,
 )
@@ -202,11 +203,10 @@ async def help_menu(_, query: CallbackQuery):
         await query.answer()
     except:
         pass
-    keyboard = InlineKeyboardMarkup(help_back2)
     try:
         await query.edit_message_text(
             text=HOW_USE.format("@E_E_9_9","@S_Q_I"),
-            reply_markup=InlineKeyboardMarkup(help_back),
+            reply_markup=InlineKeyboardMarkup(help_back2),
         )
     except Exception as e:
         LOGGER.error(e)
@@ -243,7 +243,7 @@ async def home_fallen(_, query: CallbackQuery):
         await query.edit_message_text(
             text=PM_START_TEXT.format(
                 query.from_user.mention,
-                "(◜ꪜꫀꪀ᥆ꪑ◞)[https://t.me/e_e_9_9]",
+                "[◜ꪜꫀꪀ᥆ꪑ◞](https://t.me/e_e_9_9)",
             ),
             reply_markup=InlineKeyboardMarkup(pm_buttons),
         )

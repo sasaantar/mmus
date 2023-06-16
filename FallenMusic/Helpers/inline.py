@@ -29,7 +29,7 @@ pm_buttons = [
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
-    [InlineKeyboardButton(text="◞ الأوامر◜", callback_data="fallen_help"),InlineKeyboardButton("◞ الاستعمال◜","how_to_use")],
+    [InlineKeyboardButton(text="◞ الأوامر◜", callback_data="fallen_help"),InlineKeyboardButton("◞ الاستعمال◜",callback_data="how_to_use")],
     [
         InlineKeyboardButton(text="◜ꪜꫀꪀ᥆ꪑ◞", user_id=5385770251),
         InlineKeyboardButton(text="◜𝚂𝙾𝚄𝚁𝙲𝙴◞", url="https://t.me/s_q_i"),
@@ -44,7 +44,7 @@ gp_buttons = [
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
-    [InlineKeyboardButton(text="◞ الأوامر◜", callback_data="fallen_help"),InlineKeyboardButton("◞ الاستعمال◜","how_to_use")],
+    [InlineKeyboardButton(text="◞ الأوامر◜", callback_data="fallen_help"),InlineKeyboardButton("◞ الاستعمال◜",callback_data="how_to_use")],
     [
         InlineKeyboardButton(text="◜ꪜꫀꪀ᥆ꪑ◞", user_id=5385770251),
         InlineKeyboardButton(text="◜𝚂𝙾𝚄𝚁𝙲𝙴◞", url="https://t.me/s_q_i"),

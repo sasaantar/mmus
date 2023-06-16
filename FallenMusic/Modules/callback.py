@@ -196,6 +196,21 @@ async def help_menu(_, query: CallbackQuery):
     except Exception as e:
         LOGGER.error(e)
         return
+@app.on_callback_query(filters.regex("how_to_use"))
+async def help_menu(_, query: CallbackQuery):
+    try:
+        await query.answer()
+    except:
+        pass
+    keyboard = InlineKeyboardMarkup(help_back)
+    try:
+        await query.edit_message_text(
+            text=HOW_USE.format("@E_E_9_9","@S_Q_I"),
+            reply_markup=InlineKeyboardMarkup(help_back),
+        )
+    except Exception as e:
+        LOGGER.error(e)
+        return
 
 
 @app.on_callback_query(filters.regex("fallen_cb"))
@@ -215,8 +230,7 @@ async def open_hmenu(_, query: CallbackQuery):
         await query.edit_message_text(HELP_SUDO, reply_markup=keyboard)
     elif cb == "owner":
         await query.edit_message_text(HELP_DEV, reply_markup=keyboard)
-    if query.data == "how_to_use":
-        await query.edit_message_text(HOW_USE,reply_markup=keyboard)
+    
 
 
 @app.on_callback_query(filters.regex("fallen_home"))
